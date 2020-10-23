@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/fragmentOne3"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/fragmentOne3"
+        android:name="com.example.newcalculator.FragmentOne"
+        android:label="FragmentOne" >
+        <action
+            android:id="@+id/action_fragmentOne3_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.newcalculator.FragmentTwo"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentOne3"
+            app:destination="@id/fragmentOne3" />
+    </fragment>
+</navigation>
